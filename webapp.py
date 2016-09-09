@@ -18,7 +18,11 @@ class WebApp(Bottle):
         self.route("/reset", callback=self.reset_alarms)
         self.route("/weather", callback=self.weather)
         self.route("/hello", callback=self.hello)
-    
+        self.route("/hank", callback=self.hank)
+
+    def hank(self):
+        return {"msg": "hello hank"}
+
     def hello(self):
         return {"msg": "hello"}
 
